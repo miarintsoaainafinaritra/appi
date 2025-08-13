@@ -9,7 +9,7 @@ import base64
 app = FastAPI()
 security = HTTPBasic()
 
-# Stockage en mémoire des posts
+
 posts_db = []
 
 # Q1: Route GET /ping
@@ -39,7 +39,7 @@ async def not_found_handler(request: Request, exc: HTTPException):
         status_code=404
     )
 
-# Modèle Pydantic pour les posts
+
 class Post(BaseModel):
     author: str
     title: str
