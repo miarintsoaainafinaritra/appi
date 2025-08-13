@@ -67,7 +67,7 @@ async def update_or_add_post(post: Post):
     posts_db.append(post)
     return posts_db
 
-# Bonus: Route GET /ping/auth avec authentification
+
 def verify_credentials(credentials: HTTPBasicCredentials = Depends(security)):
     correct_username = "admin"
     correct_password = "123456"
